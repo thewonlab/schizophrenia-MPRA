@@ -3,7 +3,7 @@ created by sool_lee@unc.edu
 08/08/2022
 ------------------------------------
 
-BEFORE RUNNING SCRIPTS
+*BEFORE RUNNING SCRIPTS
 
 To reproduce our results, there are two options:
 
@@ -30,3 +30,5 @@ RUNNING SCRIPTS
 1. using generate_mpra_result_from_fastq, modify line 11 to identify the location of confiz_scz.yml file
 - for option 2:
 1. using generate_mpra_result_from_count_matrix, modify line 11 to identify the location of confiz_scz.yml file
+
+REF
