@@ -1,8 +1,8 @@
-#README for SCZ MPRA
+# README for SCZ MPRA
 created by sool_lee@unc.edu
 08/08/2022
 
-##BEFORE RUNNING SCRIPTS
+## BEFORE RUNNING SCRIPTS
 
 To reproduce our results, there are two options:
 
@@ -22,7 +22,7 @@ Now...
   3-1. run generate_mpra_result_from_count_fastq for option 1  
   3-2. run generate_mpra_result_from_count_matrix for option 2
 
-##RUNNING SCRIPTS
+## RUNNING SCRIPTS
 
 - for option 1:
 1. using generate_mpra_result_from_fastq, modify line 11 to identify the location of confiz_scz.yml file
