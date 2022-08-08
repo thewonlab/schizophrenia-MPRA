@@ -29,4 +29,5 @@ Now...
 - for option 2:
 1. using generate_mpra_result_from_count_matrix, modify line 11 to identify the location of confiz_scz.yml file
 
-REF
+## REFERENCE
+Please cite this paper: Jessica C. McAfee, Sool Lee, Jiseok Lee, Jessica L. Bell, Oleh Krupa, Jessica Davis, Kimberly Insigne, Marielle L. Bond, Douglas H. Phanstiel, Michael I. Love, Jason L. Stein, Sriram Kosuri, Hyejung Won. Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants
