@@ -1,7 +1,6 @@
 #README for SCZ MPRA
 created by sool_lee@unc.edu
 08/08/2022
-------------------------------------
 
 ##BEFORE RUNNING SCRIPTS
 
@@ -22,7 +21,6 @@ Now...
 3. Depending on the option that you chose above either run:
   3-1. run generate_mpra_result_from_count_fastq for option 1  
   3-2. run generate_mpra_result_from_count_matrix for option 2
-------------------------------------
 
 ##RUNNING SCRIPTS
 
