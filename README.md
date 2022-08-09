@@ -11,6 +11,7 @@ created by sool_lee@unc.edu
   2-2. Modify _scz_file_foldername:_ to identify where the files from GEO are stored. 
   2-3. Modify _output_file_dir:_ to identify the location of the mpra result.
 3. Generate MPRA results:
+
   3-1. run _generate_mpra_result_from_count_fastq_ if you want to generate MPRA results from FASTQ files
   3-2. run _generate_mpra_result_from_count_matrix_ if you want to generate MPRA results from DNA/DNA count files (these files are preprocessed, merged, and modified FASTQ files.
 4. MPRA result will be created within the folder you specificied above (_output_file_dir:_).
