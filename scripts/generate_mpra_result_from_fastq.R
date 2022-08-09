@@ -19,10 +19,10 @@ source(str_c(config$script_dir, config$create_count_matrix_functions_scriptname)
 variant_stat <- fread(config$scz_variant_statistics_filename)
 dna_count_file <- fread(config$scz_dna_count_filepath)
 
-# LOADING BATCH1 DATA
+# LOADING BARCODE DATA
 ####################
 setwd(current_wd)
-load(config$scz_barcode_rda_filename)
+bcdat <- fread(config$scz_barcode_rda_filename)
 
 # grepping file name and generate list with files
 barcode_filenames <- list.files(pattern = config$bc_file_pattern)
