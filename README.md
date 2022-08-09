@@ -10,13 +10,15 @@ created by sool_lee@unc.edu
     - Modify _script_dir:_ to identify where the scripts/ from github are stored.
     - Modify _scz_file_foldername:_ to identify where the files from GEO are stored. 
     - Modify _output_file_dir:_ to identify the location of the mpra result.
-3. Generate MPRA results:
-    - run _generate_mpra_result_from_count_fastq_ if you want to generate MPRA results from FASTQ files
-    - run _generate_mpra_result_from_count_matrix_ if you want to generate MPRA results from DNA/DNA count files (these files are preprocessed, merged, and modified FASTQ files.
-4. MPRA result will be created within the folder you specificied above (_output_file_dir:_).
 
 ## RUNNING SCRIPTS
-- for option 1:
+
+0. Generate MPRA results:
+    - run _generate_mpra_result_from_count_fastq_ if you want to generate MPRA results from FASTQ files
+    - run _generate_mpra_result_from_count_matrix_ if you want to generate MPRA results from DNA/DNA count files (these files are preprocessed, merged, and modified FASTQ files.
+1. MPRA result will be created within the folder you specificied above (_output_file_dir:_).
+
+
 1. using _generate_mpra_result_from_fastq_, modify line 11 to identify the location of confiz_scz.yml file
 - for option 2:
 1. using _generate_mpra_result_from_count_matrix_, modify line 11 to identify the location of confiz_scz.yml file
