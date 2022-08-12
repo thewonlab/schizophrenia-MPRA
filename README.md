@@ -19,4 +19,4 @@ created by sool_lee@unc.edu
 1. MPRA result will be created within the folder you specificied above (_output_file_dir:_).
 
 ## REFERENCE
-Please cite this paper: Jessica C. McAfee, Sool Lee, Jiseok Lee, Jessica L. Bell, Oleh Krupa, Jessica Davis, Kimberly Insigne, Marielle L. Bond, Douglas H. Phanstiel, Michael I. Love, Jason L. Stein, Sriram Kosuri, Hyejung Won. Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants
+Please cite this paper: McAfee JC*, Lee S*, Lee J, Bell JL, Krupa O, Davis J, Insigne K, Bond ML, Phanstiel DH, Love MI, Stein JL, Kosuri S, Won H. Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants
