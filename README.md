@@ -4,7 +4,7 @@ created by sool_lee@unc.edu
 
 ## BEFORE RUNNING SCRIPTS
 
-0. Download files files from _GEO_ (...)
+0. Download files files from _GEO_ (GSE211045)
 1. Git clone or download our files and scripts to your local/virtual environment.
 2. Modify _config_scz.yml_ file within _files/_ folder (You only need to modify first three variables). 
     - Modify _script_dir:_ to identify where the scripts/ from github are stored.
@@ -15,7 +15,7 @@ created by sool_lee@unc.edu
 
 0. Generate MPRA results:
     - run _generate_mpra_result_from_count_fastq_ if you want to generate MPRA results from FASTQ files
-    - run _generate_mpra_result_from_count_matrix_ if you want to generate MPRA results from DNA/DNA count files (these files are preprocessed, merged, and modified FASTQ files.
+    - run _generate_mpra_result_from_count_matrix_ if you want to generate MPRA results from DNA/RNA count files (these files are preprocessed, merged, and modified FASTQ files).
 1. MPRA result will be created within the folder you specificied above (_output_file_dir:_).
 
 ## REFERENCE
