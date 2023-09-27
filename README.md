@@ -20,4 +20,4 @@ created by sool_lee@unc.edu
 
 ## REFERENCE
 
-Please cite this paper: McAfee JC*, Lee S*, Lee J, Bell JL, Krupa O, Davis J, Insigne K, Bond ML, Phanstiel DH, Love MI, Stein JL, Kosuri S, Won H. Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants
+Please cite this paper: McAfee JC*, Lee S*, Lee J, Bell JL, Krupa O, Davis J, Insigne K, Bond ML, Zhao N, Boyle BP, Phanstiel DH, Love MI, Stein JL, Ruzicka WB, Davila-Velderrain J, Kosuri S, Won H. (2023) Systematic investigation of allelic regulatory activity of schizophrenia-associated common variants. Cell Genomics doi.org/10.1016/j.xgen.2023.100404.
