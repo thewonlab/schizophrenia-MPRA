@@ -15,13 +15,11 @@ current_wd <- str_c(config$scz_file_foldername)
 source(str_c(config$script_dir, config$read_file_function_scriptname))
 source(str_c(config$script_dir, config$create_count_matrix_functions_scriptname))
 
-# loading files
-variant_stat <- fread(config$scz_variant_statistics_filename)
-dna_count_file <- fread(config$scz_dna_count_filepath)
-
-# LOADING BARCODE DATA
-####################
 setwd(current_wd)
+
+# loading files
+####################
+dna_count_file <- fread(config$scz_dna_count_filepath)
 bcdat <- fread(config$scz_barcode_rda_filename)
 
 # grepping file name and generate list with files
@@ -60,7 +58,7 @@ combined_data_na_filtered <-
   combined_data_na_filtered %>%
   as.data.frame() %>%
   na.omit() %>%
-  filter(grepl("*.scz_", variant))
+  filter(grepl("scz_", variant))
 
 combined_data_final <-
   filter_by_individual_barcode(combined_data_na_filtered, 10) %>%
@@ -81,7 +79,7 @@ combined_data_final$SNP <-
 combined_data_final$allele <-
   unlist(lapply(
     strsplit(combined_data_final$variant, split = "_"),
-    "[[", 4
+    "[[", 3
   ))
 
 # SNPS FILTER (exclude data with only 1 SNP)
@@ -90,7 +88,8 @@ snps <- table(combined_data_final$SNP)
 snps <- names(snps[snps == 1])
 combined_data_final <-
   combined_data_final[!(combined_data_final$SNP %in% snps), ] %>%
-  as.data.frame()
+  as.data.frame() %>% 
+  arrange(variant)
 
 # CREATE MATRICES AND VARIANT INFO
 ###################
@@ -98,10 +97,6 @@ dna_count_matrix <- create_count_matrix(combined_data_final, "dna", 10)
 rna_count_matrix <- create_count_matrix(combined_data_final, "rna", 10)
 
 variant_ids <- rownames(dna_count_matrix)
-
-variant_stat %<>% .[, 1:2]
-variant_stat$rsid <- unlist(lapply(strsplit(variant_stat$name, split = "_"), "[[", 2))
-variant_seqs <- variant_stat[base::match(variant_ids, variant_stat$rsid), "variant"]
 
 # CREATE DESIGN MATRIX
 ###################
@@ -122,14 +117,13 @@ mpra_set <- MPRASet(
   DNA = dna_count_matrix,
   RNA = rna_count_matrix,
   eid = variant_ids,
-  eseq = variant_seqs,
   barcode = NULL
 )
 
 mpra_lm <- mpralm(
   object = mpra_set,
   design = design_matrix,
-  plot = T,
+  plot = F,
   aggregate = "none",
   normalize = T,
   block = samples,

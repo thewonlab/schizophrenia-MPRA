@@ -13,8 +13,8 @@ create_count_matrix <- function(data_input, data_type_input, rep_num_input) {
   ) %>%
     set_rownames(unique(data_input$SNP)) %>%
     set_colnames(c(
-      paste(rep("alt", rep_num_input), paste0("s", 1:rep_num_input), sep = "_"),
-      paste(rep("ref", rep_num_input), paste0("s", 1:rep_num_input), sep = "_")
+      paste(rep("ref", rep_num_input), paste0("s", 1:rep_num_input), sep = "_"),
+      paste(rep("alt", rep_num_input), paste0("s", 1:rep_num_input), sep = "_")
     ))
 
   return(count_matrix)

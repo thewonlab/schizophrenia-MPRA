@@ -21,10 +21,6 @@ variant_ids <- rownames(dna_count_matrix)
 dna_count_matrix %<>% .[, -1]
 rna_count_matrix %<>% .[, -1]
 
-variant_stat %<>% .[, 1:2]
-variant_stat$rsid <- unlist(lapply(strsplit(variant_stat$name, split = "_"), "[[", 2))
-variant_seqs <- variant_stat[base::match(variant_ids, variant_stat$rsid), "variant"]
-
 # CREATE DESIGN MATRIX
 ###################
 design_matrix <-
@@ -44,14 +40,13 @@ mpra_set <- MPRASet(
   DNA = dna_count_matrix,
   RNA = rna_count_matrix,
   eid = variant_ids,
-  eseq = variant_seqs,
   barcode = NULL
 )
 
 mpra_lm <- mpralm(
   object = mpra_set,
   design = design_matrix,
-  plot = T,
+  plot = F,
   aggregate = "none",
   normalize = T,
   block = samples,
